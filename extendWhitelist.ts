@@ -12,6 +12,7 @@ const addresses = newAddresses.filter((a) => {
         new Address(a);
         return true;
     } catch (_) {
+        console.log(a + " is not a valid address");
         return false;
     }
 }).map((a) => new Address(a));
