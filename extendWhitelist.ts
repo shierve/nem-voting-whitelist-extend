@@ -1,5 +1,5 @@
 import { BroadcastedPoll } from "nem-voting";
-import { NEMLibrary, NetworkTypes, Account, TransactionHttp, Address, TimeWindow, NodeHttp } from 'nem-library';
+import { NEMLibrary, NetworkTypes, Account, TransactionHttp, Address, TimeWindow, NodeHttp, TransferTransaction } from 'nem-library';
 import { Observable } from "rxjs";
 
 NEMLibrary.bootstrap(NetworkTypes.TEST_NET); // Change to NetworkTypes.MAIN_NET for main net
@@ -32,7 +32,7 @@ nodeHttp.getNisNodeInfo().subscribe((nodeInfo) => {
             // get the extend transactions
             const transactions = poll.extendWhitelist(addresses).map(t => {
                 (t as any).timeWindow = (TimeWindow as any).createFromDTOInfo(timeStamp, deadline);
-                return t;
+                return (t as TransferTransaction);
             });
             // Now we sign and broadcast the transactions
             const transactionHttp = new TransactionHttp();
