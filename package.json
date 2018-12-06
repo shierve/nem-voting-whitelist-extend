@@ -14,7 +14,7 @@
     "nem-voting": "^2.0.9"
   },
   "devDependencies": {
-    "@types/node": "^9.4.7",
+    "@types/node": "^9.6.40",
     "typescript": "^2.7.2"
   }
 }
