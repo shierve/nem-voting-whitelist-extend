@@ -5,7 +5,7 @@ var fs = require('fs');
 NEMLibrary.bootstrap(NetworkTypes.TEST_NET); // Change to NetworkTypes.MAIN_NET for main net
 
 
-const pollAddress = new Address("TCPKK6V6FLILDJNF5V6U2BI73YVS7JOSDCKYFT4Y"); // the address of the poll that we want to extend
+const pollAddress = new Address("your-poll-address"); // the address of the poll that we want to extend
 
  
 BroadcastedPoll.fromAddress(pollAddress)
