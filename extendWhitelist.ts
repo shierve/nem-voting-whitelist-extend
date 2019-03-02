@@ -3,7 +3,7 @@ import { NEMLibrary, NetworkTypes, Account, TransactionHttp, Address, TimeWindow
 import { Observable } from "rxjs";
 
 NEMLibrary.bootstrap(NetworkTypes.TEST_NET); // Change to NetworkTypes.MAIN_NET for main net
-const testPrivateKey = "c195d7699662b0e2dfae6a4aef87a082d11f74d2bd583f7dec5663a107823691"; // introduce the poll creator private key
+const testPrivateKey = ""; // introduce the poll creator private key
 const pollAddress = "TC4SKO5ROW22VQGQZ2ORLKUJJ3RCKMLYWJ4WKC2N"; // the address of the poll that we want to extend
 const newAddresses = ["TCCXQPJNPXAZFKV2IZHIFLAGTSN42WPNAQI6XGK3"]; // the new addresses to be added to the whitelist
 
