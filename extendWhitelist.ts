@@ -35,7 +35,7 @@ nodeHttp.getNisNodeInfo().subscribe((nodeInfo) => {
                 (t as any).timeWindow = (TimeWindow as any).createFromDTOInfo(timeStamp, deadline);
                 return (t as TransferTransaction);
             });
-            // Now we sign and broadcast the transactions
+            // Now we sign and broadcast the transactions                           
             const transactionHttp = new TransactionHttp();
             Observable.merge(...(transactions.map((t) => {
                 const signed = account.signTransaction(t);
